@@ -5,8 +5,8 @@
 substitutions:
   # Generated name and unique device id for the device
   # Not intended for user substitutions
-  device_name: "${device_location_name} - ${device_type_name} - ${device_number}"
-  device_code: "${device_site}-${device_location_code}-${device_type_code}-${device_number}"
+  device_name: "${friendly}"
+  device_code: "${uniquename}"
 
 # Define a global variable for CPU speed
 globals:
@@ -18,7 +18,7 @@ globals:
 # Setup the integration and define some project variables
 esphome:
   name: "${device_code}"
-  friendly_name: "${device_name}"
+  friendly_name: "${friendly}"
   comment: "${device_model} by ${device_make}"
   name_add_mac_suffix: false
   min_version: "2023.2.0"
